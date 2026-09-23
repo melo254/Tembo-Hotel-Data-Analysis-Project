@@ -25,13 +25,13 @@ The analysis was conducted using **PostgreSQL** on a cleaned hotel booking datas
 
 | KPI                               |                                 Key Result |
 | --------------------------------- | -----------------------------------------: |
-| Highest Monthly Revenue           |               **KES 803,000 — March 2024** |
-| Highest Booking Volume            |                **Standard — 114 bookings** |
-| Highest Revenue Room Type         |                  **Suite — KES 2,731,100** |
-| Longest Average Stay              |                    **Suite — 3.22 nights** |
-| Top Guest City                    |                 **Nairobi — 129 bookings** |
-| Busiest Months                    | **June & October 2024 — 24 bookings each** |
-| Highest Cancellation Rate         |                     **Penthouse — 20.00%** |
+| Highest Monthly Revenue           |               **KES 803,000 - March 2024** |
+| Highest Booking Volume            |                **Standard - 114 bookings** |
+| Highest Revenue Room Type         |                  **Suite - KES 2,731,100** |
+| Longest Average Stay              |                    **Suite - 3.22 nights** |
+| Top Guest City                    |                 **Nairobi - 129 bookings** |
+| Busiest Months                    | **June & October 2024 - 24 bookings each** |
+| Highest Cancellation Rate         |                     **Penthouse - 20.00%** |
 | Cancelled & No-Show Booking Value |                          **KES 1,175,300** |
 
 ---
@@ -353,10 +353,10 @@ It should **not be treated as confirmed revenue loss**, because the available da
 
 # Tools & Technologies
 
-* **PostgreSQL** — Data querying and business analysis
-* **SQL** — Data transformation, aggregation, and analysis
-* **Data Cleaning** — Preparation and validation of booking records
-* **Business Analytics** — Revenue, occupancy, guest, staff, and cancellation analysis
+* **PostgreSQL** - Data querying and business analysis
+* **SQL** - Data transformation, aggregation, and analysis
+* **Data Cleaning** - Preparation and validation of booking records
+* **Business Analytics** - Revenue, occupancy, guest, staff, and cancellation analysis
 
 ---
 
@@ -378,9 +378,3 @@ The findings provide a foundation for further analysis such as:
 * Hotel performance dashboards
 
 ---
-
-# Project Focus
-
-**Data Analytics | SQL | PostgreSQL | Business Intelligence | Hospitality Analytics**
-
-> *Turning hotel booking data into clear, measurable business insights.*
