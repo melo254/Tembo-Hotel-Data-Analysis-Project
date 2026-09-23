@@ -1,4 +1,4 @@
-# Tembo Hotel & Suites — Business Analysis & Insights
+# Tembo Hotel & Suites - Business Analysis & Insights
 
 > **A PostgreSQL-driven analysis of hotel bookings, revenue, occupancy, guest behaviour, staff performance, and cancellations.**
 
