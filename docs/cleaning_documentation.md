@@ -1,4 +1,4 @@
-# Tembo Hotel & Suites — Data Cleaning Documentation
+# Tembo Hotel & Suites - Data Cleaning Documentation
 
 > **A structured PostgreSQL data-cleaning process focused on data quality, consistency, validation, auditability, and privacy.**
 
@@ -67,7 +67,7 @@ Business Analysis
 
 # 3. Column-Level Data Cleaning
 
-## 3.1 Booking ID — `booking_id`
+## 3.1 Booking ID - `booking_id`
 
 The raw dataset contained **286 rows but only 285 unique booking IDs**.
 
@@ -83,7 +83,7 @@ The booking ID **BK0006** appeared twice, and both records were identical across
 
 ---
 
-## 3.2 Guest Name — `guest_name`
+## 3.2 Guest Name - `guest_name`
 
 Fourteen records contained leading or trailing whitespace.
 
@@ -108,7 +108,7 @@ Guest names contain **personally identifiable information (PII)** and should not
 
 ---
 
-## 3.3 Guest Phone — `guest_phone`
+## 3.3 Guest Phone - `guest_phone`
 
 The raw data contained several phone-number formats:
 
@@ -138,7 +138,7 @@ Phone numbers are personally identifiable information and should **not be publis
 
 ---
 
-## 3.4 Guest City — `guest_city`
+## 3.4 Guest City - `guest_city`
 
 The raw dataset contained:
 
@@ -155,7 +155,7 @@ The raw dataset contained:
 
 ---
 
-## 3.5 Guest Nationality — `guest_nationality`
+## 3.5 Guest Nationality - `guest_nationality`
 
 The column contained no missing values or whitespace issues.
 
@@ -175,7 +175,7 @@ INITCAP()
 
 ---
 
-## 3.6 Room Number — `room_no`
+## 3.6 Room Number - `room_no`
 
 The dataset contained **286 valid room-number records across 10 distinct rooms**.
 
@@ -193,7 +193,7 @@ Room numbers were retained and converted to an **integer data type** in the clea
 
 ---
 
-## 3.7 Room Type — `room_type`
+## 3.7 Room Type - `room_type`
 
 The raw dataset contained eight variations representing four room categories:
 
@@ -231,7 +231,7 @@ Deluxe / deluxe / DLX
 
 ---
 
-## 3.8 Room Rate Per Night — `room_rate_per_night`
+## 3.8 Room Rate Per Night - `room_rate_per_night`
 
 The dataset contained four valid room rates:
 
@@ -323,7 +323,7 @@ rather than being estimated.
 
 ---
 
-## 3.11 Staff Name — `staff_name`
+## 3.11 Staff Name - `staff_name`
 
 The column contains **286 records representing eight distinct staff members**.
 
@@ -340,7 +340,7 @@ INITCAP()
 
 ---
 
-## 3.12 Staff Department — `staff_department`
+## 3.12 Staff Department - `staff_department`
 
 The dataset contains five departments:
 
@@ -360,7 +360,7 @@ No missing values or apparent spelling inconsistencies were identified.
 
 ---
 
-## 3.13 Staff Salary — `staff_salary`
+## 3.13 Staff Salary - `staff_salary`
 
 The column contained seven valid salary values ranging from:
 
@@ -389,7 +389,7 @@ NUMERIC(12,2)
 
 ---
 
-## 3.14 Payment Method — `payment_method`
+## 3.14 Payment Method - `payment_method`
 
 The raw dataset contained inconsistent representations of M-Pesa:
 
@@ -416,7 +416,7 @@ Whitespace was removed and capitalization was normalized.
 
 ---
 
-## 3.15 Booking Status — `booking_status`
+## 3.15 Booking Status - `booking_status`
 
 Booking statuses were standardized to:
 
@@ -432,7 +432,7 @@ No missing booking-status values were identified.
 
 ---
 
-## 3.16 Total Amount — `total_amount`
+## 3.16 Total Amount - `total_amount`
 
 The raw column contained numeric, missing, and malformed values.
 
@@ -470,7 +470,7 @@ No zero or negative total amounts were identified after cleaning.
 
 ---
 
-## 3.17 Service Used — `service_used`
+## 3.17 Service Used - `service_used`
 
 The raw dataset contained:
 
@@ -500,7 +500,7 @@ INITCAP()
 
 ---
 
-## 3.18 Service Price — `service_price`
+## 3.18 Service Price - `service_price`
 
 Service prices were validated as numeric values and stored as:
 
@@ -520,7 +520,7 @@ Valid service prices correspond to the recorded service types.
 
 ---
 
-## 3.19 Guest Rating — `guest_rating`
+## 3.19 Guest Rating - `guest_rating`
 
 The rating field was validated against the expected **1–5 range**.
 
@@ -671,33 +671,6 @@ For the portfolio version, guest names and phone numbers should be:
 * Anonymized
 * Replaced with non-identifying surrogate values
 
-### Recommended Public Dataset Structure
-
-Instead of exposing:
-
-```text
-guest_name
-guest_phone
-```
-
-a public portfolio dataset could use:
-
-```text
-guest_id
-```
-
-For example:
-
-```text
-GUEST_001
-GUEST_002
-GUEST_003
-```
-
-This preserves analytical relationships without exposing personally identifiable information.
-
----
-
 # 9. Key Data-Cleaning Outcomes
 
 The cleaning process transformed the raw dataset into a structured, analysis-ready PostgreSQL table by addressing:
@@ -711,17 +684,3 @@ The cleaning process transformed the raw dataset into a structured, analysis-rea
 The resulting `tembo_hotel.clean_bookings` table provides a reliable foundation for the next stage of the project: **business analysis and visualization.**
 
 ---
-
-## Tools & Technologies
-
-* **PostgreSQL** — Data cleaning, transformation, validation, and storage
-* **SQL** — Data standardization and quality checks
-* **Data Cleaning** — Missing-value treatment, deduplication, validation, and formatting
-* **Business Analytics** — Preparing the dataset for hotel performance analysis
-* **Power BI** — Planned visualization and reporting layer
-
----
-
-## Project Focus
-
-**Data Cleaning | PostgreSQL | SQL | Data Quality | Business Analytics | Hospitality Analytics | Data Privacy**
